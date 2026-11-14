@@ -1,4 +1,4 @@
-# Todo REST API for DevOps Pipeline 
+# Verify automatic CI trigger 
 import os
 from flask import Flask, jsonify, request
 
