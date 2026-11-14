@@ -1,0 +1,3 @@
+---
+  - name: Restart todo-api service
+    ansible.builtin.shell: /usr/local/bin/todo-api-service restart

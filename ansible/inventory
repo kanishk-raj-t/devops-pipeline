@@ -1,0 +1,2 @@
+[app_servers]
+ansible-target ansible_connection=docker

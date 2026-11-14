@@ -1,0 +1,10 @@
+---
+  - name: Configure Server and Deploy Todo REST API
+    hosts: app_servers
+    gather_facts: false
+    pre_tasks:
+      - name: Bootstrap Python3 on target container for Ansible
+        ansible.builtin.raw: test -e /usr/bin/python3 || (apt-get update && apt-get install -y python3)
+        changed_when: false
+    roles:
+      - todo_app
