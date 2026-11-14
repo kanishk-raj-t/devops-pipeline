@@ -28,6 +28,9 @@ def add_todo():
     }
     todos.append(new_todo)
     return jsonify(new_todo), 201
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "healthy"}), 200
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
